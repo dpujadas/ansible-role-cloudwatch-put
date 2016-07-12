@@ -22,7 +22,8 @@ galaxy_info:
 dependencies:
 - src: 'https://github.com/dpujadas/ansible-role-awscli.git'
   version: master
-  role: awscli
+  scm: git
+  name: awscli
   awscli_user: '{{ cloudwatch_put_user }}'
   awscli_access_key: '{{ cloudwatch_put_access_key }}'
   awscli_secret_key: '{{ cloudwatch_put_secret_key }}'
