@@ -76,7 +76,7 @@ VERBOSE=0
 DEBUG=0
 FROM_CRON=0
 PROFILE=""
-NAMESPACE="System/Detail/Linux"
+NAMESPACE="{{ cloudwatch_put_namespace }}"
 LOAD_AVE1=0
 LOAD_AVE5=0
 LOAD_AVE15=0
@@ -311,7 +311,7 @@ if [ $FROM_CRON -eq 1 ]; then
 fi
 
 # CloudWatch Command Line Interface Option
-CLOUDWATCH_OPTS="--namespace ${NAMESPACE} --dimensions InstanceId=$instanceid"
+CLOUDWATCH_OPTS="--namespace ${NAMESPACE} --dimensions {{ cloudwatch_put_dimensions }}"
 if [ -n "$PROFILE" ]; then
     CLOUDWATCH_OPTS="$CLOUDWATCH_OPTS --profile $PROFILE"
 fi

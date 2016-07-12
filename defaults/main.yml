@@ -10,3 +10,5 @@ cloudwatch_put_path: '/opt'
 cloudwatch_put_set_cron: False
 cloudwatch_put_aws_bin: '/usr/local/bin/aws'
 cloudwatch_put_opts: ''
+cloudwatch_put_namespace: 'Custom-EC2'
+cloudwatch_put_dimensions: 'InstanceId=${instanceid}'
