@@ -20,12 +20,10 @@ galaxy_info:
     - cloudwatch
 
 dependencies:
-  - {
-    role: awscli,
-    src: 'https://github.com/dpujadas/ansible-role-awscli.git',
-    version: master,
-    awscli_user: '{{ cloudwatch_put_user }}',
-    awscli_access_key: '{{ cloudwatch_put_access_key }}',
-    awscli_secret_key: '{{ cloudwatch_put_secret_key }}',
-    awscli_region: '{{ cloudwatch_put_region }}'
-  }
+- src: 'https://github.com/dpujadas/ansible-role-awscli.git'
+  version: master
+  role: awscli
+  awscli_user: '{{ cloudwatch_put_user }}'
+  awscli_access_key: '{{ cloudwatch_put_access_key }}'
+  awscli_secret_key: '{{ cloudwatch_put_secret_key }}'
+  awscli_region: '{{ cloudwatch_put_region }}'
