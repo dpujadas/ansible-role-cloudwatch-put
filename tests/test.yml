@@ -1,0 +1,8 @@
+- hosts: travis
+  connection: docker
+  remote_user: root
+  roles:
+    - {
+      role: ansible-role-cloudwatch-put,
+      cloudwatch_put_region: 'eu-west-1'
+    }

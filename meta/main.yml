@@ -1,0 +1,31 @@
+galaxy_info:
+  author: David Pujadas
+  description: Ansible role to send some linux metrics to AWS CloudWatch.
+
+  license: MIT
+
+  min_ansible_version: 2.0
+
+  platforms:
+  - name: Ubuntu
+    versions:
+      - precise
+      - trusty
+      - wily
+      - xenial
+
+  galaxy_tags:
+    - ubuntu
+    - aws
+    - cloudwatch
+
+dependencies:
+  - {
+    role: awscli,
+    src: 'https://github.com/dpujadas/ansible-role-awscli.git',
+    version: master,
+    awscli_user: '{{ cloudwatch_put_user }}',
+    awscli_access_key: '{{ cloudwatch_put_access_key }}',
+    awscli_secret_key: '{{ cloudwatch_put_secret_key }}',
+    awscli_region: '{{ cloudwatch_put_region }}'
+  }

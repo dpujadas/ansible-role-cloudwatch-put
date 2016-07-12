@@ -1,0 +1,12 @@
+---
+# defaults file for cloudwatch-put
+
+cloudwatch_put_user: 'root'
+cloudwatch_put_group: '{{ cloudwatch_put_user }}'
+cloudwatch_put_access_key: ''
+cloudwatch_put_secret_key: ''
+cloudwatch_put_region: ''
+cloudwatch_put_path: '/opt'
+cloudwatch_put_set_cron: False
+cloudwatch_put_aws_bin: '/usr/local/bin/aws'
+cloudwatch_put_opts: ''

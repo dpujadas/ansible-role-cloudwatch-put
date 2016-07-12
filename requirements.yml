@@ -1,0 +1,5 @@
+## Just for travis testing, dependencies are managed by meta/main.yml
+# awscli
+- src: https://github.com/dpujadas/ansible-role-awscli.git
+  version: master
+  name: awscli
